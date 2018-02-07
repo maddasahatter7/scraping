@@ -1,0 +1,24 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+    background: url(../images/circuit.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    }
+    .jumbotron {
+        background: rgba(33, 217, 250, 0.6);
+        margin-top: 1em;
+    }
+    h1{
+        color: rgb(0, 5, 5)!important;
+        text-shadow: 3px 3px 5px #000000b4;
+    }
+    h2 {
+        color: rgb(0, 0, 0);
+        font-size: 1.5em;
+        text-shadow: 4px 4px 6px #000000;
+    }
