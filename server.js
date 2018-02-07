@@ -31,12 +31,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // To log requests
 app.use(logger("dev"));
 
-// Get route to scrape Space.com
+// Get route to scrape RichardDawkinsFoundation.net
 app.get("/scrape", function(req, res) {
     // Grabbing entire body of the html (wondering if this will work how i expect)
-    axios.get(https://www.space.com/tech-robots).then(function(response) {
+    axios.get(https://www.richarddawkins.net/news/).then(function(response) {
         // loading to cheerio and making it a shorthand selector
         var $ = cheerio.load(response.data);
-    })
-})
+    });
+
 
