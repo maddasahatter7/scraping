@@ -1,32 +1,31 @@
+// Requiring mr. mongoose
 var mongoose = require("mongoose");
 
-// Save a reference to the Schema constructor
+// Taking the schema constructor and saving a ref to it to keep things copacetic
 var Schema = mongoose.Schema;
 
-// Using the Schema constructor, create a new UserSchema object
-// This is similar to a Sequelize model
+// Making a brand spaking new UserSchema object
 var ArticleSchema = new Schema({
-  // `title` is required and of type String
+  // It's called "title" because it is required if ye be a string
   title: {
     type: String,
     required: true
   },
-  // `link` is required and of type String
+  // It is also required to be "link", not my rules
   link: {
     type: String,
     required: true
   },
-  // `note` is an object that stores a Note id
-  // The ref property links the ObjectId to the Note model
-  // This allows us to populate the Article with an associated Note
+  //Here is how young Mads is going to populate the Article with a Note. 
+  // Storing the Note id right hurrr. the ref. prop. is what will link the object id with the Note model
   note: {
     type: Schema.Types.ObjectId,
     ref: "Note"
   }
 });
 
-// This creates our model from the above schema, using mongoose's model method
+//The mongoose model method below uses the schema from up top to make the model
 var Article = mongoose.model("Article", ArticleSchema);
 
-// Export the Article model
+// The usual module.exports to export my dear, sweet Article model
 module.exports = Article;
